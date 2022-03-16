@@ -1,13 +1,14 @@
-int score = 80;
+int score = 80;  // declared int(primitive type) variable(score) and 80 is assigned to it
 
-String result;
+String result;   //declared a variable(result) of reference type
 
-if (score == 80) {
+// сhecking the conditions
+if (score == 80) {                , if score equals to 80 then "You passed!" is assigned to the result 
 	result = "You passed!";
-} else if (score > 80) {
+} else if (score > 80) {          if score more than 80 then "You did great!" is assigned to the result  
 	result = "You did great!";
-} else {
-	result = "You did not pass. Try again!";
+} else {                          if score less than 80 then  "You did not pass. Try again!" is assigned to the result
+	result = "You did not pass. Try again!";  
 }
 
-System.out.println(result);
+System.out.println(result);    Printing the result to the console(bash).
