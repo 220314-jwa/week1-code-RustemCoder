@@ -1,52 +1,55 @@
-public static void main(String[] args) {
-	String[] foodTypes = getFoodTypes();
-	String myType = foodTypes[2];
+public static void main(String[] args) {      \\The entry point of a program
+	String[] foodTypes = getFoodTypes();      \\calling the function(getFoodTypes) to get array of foodTypes
+	String myType = foodTypes[2];              \\ getting the third element of array(foodTypes) and assigning it to the varriable named myType
 
-	String[] foodsOfMyType = getFoodsByType(myType);
+	String[] foodsOfMyType = getFoodsByType(myType);  \\calling the function(getFoodsByType) to get array of foodsOfMyType  
 	
-	for (String food : foodsOfMyType) {
+	for (String food : foodsOfMyType) {   \\looping throught the array to print every element in it
 		System.out.println(food);
 	}
 }
 
-public static String[] getFoodTypes() {
-	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"};
-	return foodTypes;
+public static String[] getFoodTypes() {                                 \\ declaring a function getFoodTypes, which returns array.
+	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"}; \\ declared an array of Strings and initialized it with values.
+	return foodTypes;   \\ returning the array
 }
 
-public static String[] getFoodsByType(String type) {
-	String[] foods = new String[3];
-
-	switch(type) {
-	case "breakfast":
-		foods[0] = "pancakes";
-		foods[1] = "cereal";
-		foods[2] = "omelette";
-		break;
-	case "lunch":
+public static String[] getFoodsByType(String type) {    \\declaring a function getFoodsByType,which takes an argument of String type and returns an array of Strings
+	String[] foods = new String[3];                    \\ declaring an array of Strings and initialized it size of 3.
+  
+	switch(type) {                            \\ switch condition , which gets an argument and executes the corresponding case.
+	case "breakfast":                         \\ if our type is "breaksfast" then :
+		foods[0] = "pancakes";                \\ pancakes will be assigned to the first element of the array
+		foods[1] = "cereal";                  \\ cereal will be assigned to the second element of the array
+		foods[2] = "omelette";                \\ omelette will be assigned to the third element of the array
+		break;                                \\ breaking the case in order other cases will not be executed
+	case "lunch":                              \\ if our type is "lunch" then 
 		foods[0] = "sandwich";
 		foods[1] = "salad";
 		foods[2] = "soup";
 		break;
-	case "dinner":
+	case "dinner":                           \\if our type is "dinner" then will do operations like in first case, but with other values.
 		foods[0] = "curry";
 		foods[1] = "stir fry";
 		foods[2] = "burger";
 		break;
-	case "dessert":
+	case "dessert":                         \\ if our type is "dessert" then  will do operations like in first case, but with other values.
 		foods[0] = "cake";
 		foods[1] = "ice cream";
 		foods[2] = "candy";
 		break;
-	case "snack":
+	case "snack":                           \\ if our type is "snack" then  will do operations like in first case, but with other values.
 		foods[0] = "chips";
 		foods[1] = "apple";
 		foods[2] = "samosa";
 		break;
-	default:
+	default:                             \\ default case will be executed , if there is no accordint to the argument case.
 		// add your own
+		foods[0] = "pineapple";
+		foods[1] = "apple";
+		foods[2] = "banana";
 		break;
 	}
 
-	return foods;
+	return foods;                     \\ returning the array of foods
 }
