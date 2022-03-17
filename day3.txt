@@ -1,24 +1,29 @@
+\\ declaring a class "Food" , which has public fields name(String) and type(String).
 public class Food {
-	public String name;
-	public String type;
+	public String name;  \\declaring a field of class(name) of String type.
+	public String type;  \\declaring a field of class(type) of String type.
 
-	public Food(String name, String type) {
-		this.name = name;
+ \\declaring a constructor of the class for instantiation, which takes two arguments of String type:name, type
+	public Food(String name, String type) { 
+		this.name = name;  \\assigning the arguments of constructor to the fields of the class
 		this.type = type;
 	}
-
+\\Declaring a function cook , which returns nothing(void), does not take arguments.
 	public void cook() {
-		if (!name.contains("cooked")) {
-			name = "cooked " + name;
+\\ if condition , which checks , does the field name contain a word "cooked", if it is true, 
+ \\ the code in figure brackets will be executed
+		if (!name.contains("cooked")) {  
+ 			name = "cooked " + name;
 		}
 	}
 }
 
+// declared a main class , where we have an entry point of our program(main function)
 public class Main {
-	public static void main(String[] args) {
-		Food myFood = new Food("potato", "vegetable");
-		myFood.cook();
+	public static void main(String[] args) {   \\ entry point of our program
+		Food myFood = new Food("potato", "vegetable");  \\created an object of Food class. Object is instantiated with arguments.
+		myFood.cook();                                  \\ calling the method of the object                   
 
-		System.out.println(myFood.name);
+		System.out.println(myFood.name);                \\Printing to the console name of the object
 	}
 }
