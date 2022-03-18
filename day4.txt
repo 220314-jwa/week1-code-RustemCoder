@@ -1,11 +1,14 @@
+\\ an app which can handle get requests from a client and respond . The app is created with Javalin framework
 public class Main {
-	public static void main(String[] args) {
-		Javalin app = Javalin.create();
+	public static void main(String[] args) { \\ an entry point of the program
+		Javalin app = Javalin.create();  created an javalin object
 
+		\\ Synchronously starts the application instance on the specified port
 		app.start();
 
+		\\Adding get request handler for the path "foods".
 		app.get("foods", ctx -> {
-			Food myFood = new Food("carrots", "vegetable");
+			Food myFood = new Food("carrots", "vegetable"); creating an object of Food with constructor which takes two parameters.
 			ctx.result("You got: " + myFood.name);
 		});
 	}
