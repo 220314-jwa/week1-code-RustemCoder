@@ -4,7 +4,7 @@
 	</head> \\ closing tag of the head 
 	<body>  \\ tag contains all the content of the Html document(page).
 		<h1>Cook your food!</h1> \\ header tag
-		<form action="http://localhost:8080/cook"> \\ the tag used for user input in order  to send to a server.
+		<form action="http://localhost:8080/cook"> \\ the tag used for user input in order  to send to a server. The attribute action  specifies where our request will be send.
 			<label for="foodName">Food Name:</label> \\ for labelling the input increases usability
 			<input id="foodName" name="foodName" type="text"> \\  specifies an input field with text type where the user can enter data.  
 			<br> \\ line break(tag)
