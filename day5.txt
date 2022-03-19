@@ -1,23 +1,23 @@
-<html>
-	<head>
-		<title>Daily Code Review</title>
-	</head>
-	<body>
-		<h1>Cook your food!</h1>
-		<form action="http://localhost:8080/cook">
-			<label for="foodName">Food Name:</label>
-			<input id="foodName" name="foodName" type="text">
-			<br>
-			<button type="submit">Submit</button>
-		</form>
-	</body>
-</html>
+<html>   \\ tag html is a container for all tags.  root of the html document.
+	<head>    \\ tag contains metadata of the page
+		<title>Daily Code Review</title>  \\ tag contains  title of the page
+	</head> \\ closing tag of the head 
+	<body>  \\ tag contains all the content of the Html document(page).
+		<h1>Cook your food!</h1> \\ header tag
+		<form action="http://localhost:8080/cook"> \\ the tag used for user input in order  to send to a server.
+			<label for="foodName">Food Name:</label> \\ for labelling the input increases usability
+			<input id="foodName" name="foodName" type="text"> \\  specifies an input field with text type where the user can enter data.  
+			<br> \\ line break(tag)
+			<button type="submit">Submit</button> \\ tag for button. Attribute "submit" specifies the type of button.
+		</form> \\ closing tag for form
+	</body> \\closing tag for body
+</html> closing tag for html
 
 public static void main(String[] args) {
-	Javalin app = Javalin.create();
-	app.start();
+	Javalin app = Javalin.create();    \\ created an object of Javalin
+	app.start();                       \\ launched our application on 8080 port by default. The app is listening for http requests.
 
-	app.get("cook", ctx -> {
+	app.get("cook", ctx -> {           \\ setting to the path "cook" handler. Which will return "Here's your food! <br>" + cookedFood
 		String foodSent = ctx.formParam("foodName");
 		String cookedFood = "cooked " + foodSent;
 		ctx.result("Here's your food! <br>" + cookedFood);
