@@ -17,7 +17,7 @@ public static void main(String[] args) {
 	Javalin app = Javalin.create();    \\ created an object of Javalin
 	app.start();                       \\ launched our application on 8080 port by default. The app is listening for http requests.
 
-	app.get("cook", ctx -> {           \\ setting to the path "cook" handler. Which will return "Here's your food! <br>" + cookedFood
+	app.get("cook", ctx -> {           \\ setting to the path "cook" get handler. Which will return "Here's your food! <br>" + cookedFood
 		String foodSent = ctx.formParam("foodName");
 		String cookedFood = "cooked " + foodSent;
 		ctx.result("Here's your food! <br>" + cookedFood);
